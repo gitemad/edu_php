@@ -4,7 +4,7 @@
 	</head>
 
 	<body>
-		<form action="login.php">
+		<form action="login.php" method="POST">
 			<input name="username" type="text">
 			<br>
 			<input name="password" type="password">
