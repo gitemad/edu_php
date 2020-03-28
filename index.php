@@ -1,21 +1,9 @@
 <html>
 	<body>
-		<form action="login.php">
-			<input type="text" name="username">
+		<form action="login.php" method="post" enctype="multipart/form-data">
+			<input type="file" name="upfile">
 			<br/>
-			<select name="birth">
-				<?php 
-				    for ($i = 1299; $i < 1400; $i++) {
-				        echo "<option ";
-				        if ($i == 1375) {
-				            echo "selected"; 
-				        }
-				        echo "> $i";
-				        echo "</option>";
-				    }
-				            
-				?>
-			</select>
+			<input type ="submit">
 		</form>
 	</body>
 </html>
