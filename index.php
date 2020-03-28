@@ -1,15 +1,21 @@
 <html>
-	<head>
-	
-	</head>
-
 	<body>
-		<form action="login.php" method="POST">
-			<input name="username" type="text">
-			<br>
-			<input name="password" type="password">
-			<br>
-			<input name="button" type="submit" value="Submit">
+		<form action="login.php">
+			<input type="text" name="username">
+			<br/>
+			<select name="birth">
+				<?php 
+				    for ($i = 1299; $i < 1400; $i++) {
+				        echo "<option ";
+				        if ($i == 1375) {
+				            echo "selected"; 
+				        }
+				        echo "> $i";
+				        echo "</option>";
+				    }
+				            
+				?>
+			</select>
 		</form>
 	</body>
 </html>
