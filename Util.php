@@ -1,4 +1,5 @@
 <?php
+
     function upload($uploadedfile, $dir="uploaded") {
         $file = $_FILES[$uploadedfile];
         $from = $file['tmp_name'];
