@@ -1,9 +1,5 @@
-<html>
-	<body>
-		<form action="login.php" method="post" enctype="multipart/form-data">
-			<input type="file" name="upfile">
-			<br/>
-			<input type ="submit">
-		</form>
-	</body>
-</html>
+<?php 
+//     $date = date("Y-M-d h:i:s", time());
+    $date = getdate(time());
+    echo $date["month"];
+?>
