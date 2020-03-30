@@ -5,7 +5,15 @@
         $pass = $_POST['pass'];
         $con_pass = $_POST['con_pass'];
         if ($pass == $con_pass) {
-            header('Location: '."login.php");
+            $connection = mysqli_connect("localhost", "root", "", "edu_db");
+            
+            if (!$connection) {
+                die();
+            } else {
+                $query = "INSERT INTO user (username, password, email) VALUES ('$username', '$pass', '$email')";
+                mysqli_query($connection, $query);
+            }
+            
         } else {
             echo "INCORRECT";
         }
