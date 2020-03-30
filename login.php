@@ -1,4 +1,3 @@
 <?php
-    include 'Util.php';
-    upload("upfile");
+    echo "You are in login.php";
 ?>
