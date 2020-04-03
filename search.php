@@ -1,10 +1,11 @@
 <html>
     <head>
+    	<link href="style.css" rel="stylesheet">
     </head>
     <body>
     	<form action="">
-    		<input name="search" type="text">
-    		<input name="submit" type="submit" value="Search">
+    		<input name="search" type="text" class="input">
+    		<input name="submit" type="submit" class="input" value="Search">
     	</form>
 
     <?php
@@ -15,7 +16,7 @@
             if (!$connection) {
                 die();
             } else {
-                $query = "SELECT * FROM user_tbl WHERE username LIKE '%$text%' OR email LIKE '%$text%'";
+                $query = "SELECT * FROM user_tbl WHERE username LIKE '%$text%' OR email LIKE '%$text%' ORDER BY age ASC";
                 $data = mysqli_query($connection, $query);
                 
             echo '<table>';
