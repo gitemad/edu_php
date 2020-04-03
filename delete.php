@@ -8,7 +8,7 @@
     $query = "SELECT profile_pic FROM user_tbl WHERE username LIKE '$user[0]%$user[$last_char]'";
     $data = mysqli_query($connection, $query);
     $record = mysqli_fetch_assoc($data);
-    var_dump($record);
+//     var_dump($record);
     
     if (!$connection) {
         die();
