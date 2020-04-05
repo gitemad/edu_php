@@ -12,6 +12,7 @@ if ($_POST) {
         die();
     } else {
         $now = time();
+        $pass = sha1($pass);
         $query = "INSERT INTO user_tbl (username, password, email, age, profile_pic, date_created, last_modified) 
                                 VALUES ('$username', '$pass', '$email', '$age', '$pic_dir', '$now', '$now')";
         mysqli_query($connection, $query);
