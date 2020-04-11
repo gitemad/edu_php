@@ -4,7 +4,7 @@
     $data = mysqli_query($connection, $query);
     while ($record = mysqli_fetch_assoc($data)) {
         echo $record['id'].". ";
-        echo filter_var($record['comment'], FILTER_SANITIZE_SPECIAL_CHARS);
+        echo filter_var($record['comment'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
         echo "<br/>";
     }
     
